@@ -22,40 +22,56 @@ O objetivo desta entrega obrigatória é carregar os dados coletados pelos senso
 
 ---
 
-## ⚙️ Processo Detalhado
+## 🎬 Vídeo de Demonstração (Parte 1)
+
+O vídeo abaixo demonstra o processo completo de conexão, a importação assistida e a consulta de validação (`SELECT *`) na tabela final.
+
+**https://youtu.be/249f2QICEHE**
+
+---
+
+## ⚙️ Processo Detalhado e Prints de Evidência
 
 O trabalho foi dividido nas seguintes etapas:
 
-### 1. Preparação dos Dados
+### 1. Preparação dos Dados e Conexão
 
-Nossos dados da Fase 2 (originados do arquivo `cidades.json`) foram processados e convertidos para um arquivo Excel (`dados_cidades.xlsx`). Este foi o formato utilizado para a importação no Oracle SQL Developer, que reconheceu o formato `excel 95-2003 (xls)`.
+Os dados da Fase 2 (`cidades.json`) foram processados e convertidos para `dados_cidades.xlsx`. A conexão com o banco de dados da FIAP foi estabelecida com sucesso e nomeada como `FIAP_cap1_fase3`.
 
-### 2. Configuração do Oracle SQL Developer
+![Conexão Estabelecida](Ambiente%20preparado%20(1).jpeg)
 
-Foi feito o download e a instalação do Oracle SQL Developer. A conexão com o banco de dados da FIAP foi estabelecida com sucesso e nomeada como `FIAP_cap1_fase3`.
+### 2. Importação dos Dados
 
-### 3. Importação dos Dados
+Seguimos o "Assistente de Importação de Dados" para carregar o arquivo `xlsx`:
 
-Com a conexão ativa, seguimos o "Assistente de Importação de Dados":
+1.  **Visualização dos Dados (Etapa 1 de 5):** O assistente identificou o arquivo de origem.
+    ![Início da Importação](In%C3%ADcio%20da%20importa%C3%A7%C3%A3o%20(2).jpeg)
+2.  **Método de Importação (Etapa 2 de 5):** Definimos o nome da tabela de destino como **`dados_cidades_API`**.
+    ![Definição da Tabela](M%C3%A9todo%20de%20importa%C3%A7%C3%A3o%20e%20nomenclatura(3).jpeg)
+3.  **Escolher Colunas (Etapa 3 de 5):** Mapeamos as colunas `CIDADE` e `PROBABILIDADE_DE_CHUVA`.
+    ![Seleção das Colunas](Sele%C3%A7%C3%A3o%20das%20colunas(4).jpeg)
+4.  **Definição de Coluna (Etapa 4 de 5):** Ajustamos os tipos de dados.
+    ![Definição dos Tipos](defini%C3%A7%C3%A3o%20das%20colunas(5).jpeg)
+5.  **Concluir (Etapa 5 de 5):** O assistente mostrou o resumo.
+    ![Resumo da Importação](Concluir%20importa%C3%A7%C3%A3o%20(6).jpeg)
 
-1.  Clicamos com o botão direito em "Tabelas" e selecionamos "Importar Dados...".
-2.  Carregamos o arquivo `dados_cidades.xlsx`.
-3.  Definimos o nome da tabela de destino como **`dados_cidades_API`**.
-4.  Mapeamos as colunas (`CIDADE` e `PROBABILIDADE_DE_CHUVA`) e seus tipos.
-5.  Concluímos a importação, que foi confirmada com a mensagem "Tarefa bem-sucedida e importação com commit efetuado."
+A importação foi confirmada com a mensagem "Tarefa bem-sucedida e importação com commit efetuado."
 
-### 4. Solução de Problemas (Erro ORA-00900)
+![Sucesso](importa%C3%A7%C3%A3o%20bem%20sucedida(7).jpeg)
+
+### 3. Solução de Problemas (Erro ORA-00900)
 
 Na primeira tentativa de consulta, encontramos o erro `ORA-00900: instrução SQL inválida`.
 
 * **Comando com Erro:** `SELECT*FROM DADOS_CIDADES_API;`
 * **Causa:** Erro de sintaxe. Faltava um espaço entre `SELECT` e o caractere `*`.
 
-### 5. Validação (Consulta SQL)
+![Erro de Sintaxe](Erro%20de%20sintaxe%20no%20teste%20(8).jpeg)
+
+### 4. Validação (Consulta SQL Correta)
 
 Após corrigir a sintaxe, a consulta foi executada com sucesso, validando que todos os dados estavam presentes no banco da Oracle.
 
 * **Comando Correto:**
 ```sql
 SELECT * FROM DADOS_CIDADES_API;
-
