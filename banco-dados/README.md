@@ -22,6 +22,14 @@ O objetivo desta entrega obrigatória é carregar os dados coletados pelos senso
 
 ---
 
+## 🎬 Projeto Github
+
+Segue o link do projeto no github.
+
+**[https://youtu.be/249f2QICEHE](https://github.com/fiap-ia-trabalho/pbl-fase3-cap-1-etapas-de-uma-maquina-agricola/main/banco-dados)**
+
+---
+
 ## 🎬 Vídeo de Demonstração (Parte 1)
 
 O vídeo abaixo demonstra o processo completo de conexão, a importação assistida e a consulta de validação (`SELECT *`) na tabela final.
@@ -78,6 +86,7 @@ SELECT * FROM DADOS_CIDADES_API;
 ```
 
 ![Consulta SELECT *](Sucesso(9).jpeg)
+
 
 
 
