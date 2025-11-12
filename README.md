@@ -25,6 +25,9 @@
 
 *Este trabalho tem por objetivo aplicar os conceitos aprendidos em aula e aprimorar o sistema desenvolvido na fase anterior.*
 
+## 📁 Link do projeto
+
+**https://github.com/fiap-ia-trabalho/pbl-fase3-cap-1-etapas-de-uma-maquina-agricola**
 
 ## 📁 Estrutura de pastas
 Dentre os arquivos e pastas presentes na raiz do projeto, definem-se:
