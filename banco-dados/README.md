@@ -76,5 +76,8 @@ Após corrigir a sintaxe, a consulta foi executada com sucesso, validando que to
 ```sql
 SELECT * FROM DADOS_CIDADES_API;
 
+![Consulta SELECT *](Sucesso(9).jpeg)
+
+
 
 
