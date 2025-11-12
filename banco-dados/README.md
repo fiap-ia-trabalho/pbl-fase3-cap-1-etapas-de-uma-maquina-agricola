@@ -1,8 +1,8 @@
 # FarmTech Solutions - PBL Fase 3: Banco de Dados Oracle
 
-**Curso:** Inteligência Artificial & Computação em Nuvem··
-**Instituição:** FIAP ON··
-**Atividade:** PROJETO FASE 3 - ETAPAS DE UMA MÁQUINA AGRÍCOLA
+* **Curso:** Inteligência Artificial & Computação em Nuvem
+* **Instituição:** FIAP ON
+* **Atividade:** PROJETO FASE 3 - ETAPAS DE UMA MÁQUINA AGRÍCOLA
 
 ---
 
@@ -75,5 +75,6 @@ Após corrigir a sintaxe, a consulta foi executada com sucesso, validando que to
 * **Comando Correto:**
 ```sql
 SELECT * FROM DADOS_CIDADES_API;
+
 
 
